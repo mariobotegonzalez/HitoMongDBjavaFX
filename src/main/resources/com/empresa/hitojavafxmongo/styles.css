@@ -1,0 +1,93 @@
+/* Estilo general para la aplicación */
+.root {
+    -fx-font-family: 'Arial';
+    -fx-padding: 10;
+}
+
+/* Estilo para el TableView */
+.table-view {
+    -fx-background-color: #f0f0f0;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 10;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #4CAF50;
+}
+
+.table-view .column-header, .table-view .column-header-background .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .cell {
+    -fx-padding: 5;
+}
+
+.table-view .cell:selected {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+/* Estilo para los botones */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.button-neon {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 0, 0.8), 10, 0.5, 0, 0);
+}
+
+.button-neon:hover {
+    -fx-background-color: #45a049;
+}
+
+/* Estilo para las etiquetas */
+.label {
+    -fx-font-size: 16;
+    -fx-text-fill: #333333;
+}
+
+/* Estilo para los campos de texto */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 1;
+    -fx-padding: 5;
+    -fx-background-radius: 5;
+}
+
+/* Estilo para VBox y HBox */
+.vbox, .hbox {
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+}
+
+/* Estilo para el botón de cerrar sesión */
+.button-red {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.button-red:hover {
+    -fx-background-color: #cc0000;
+}

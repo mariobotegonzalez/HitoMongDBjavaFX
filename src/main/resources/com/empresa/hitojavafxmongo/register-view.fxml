@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.hitojavafxmongo.RegisterController" stylesheets="@styles.css">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Crear Usuario" styleClass="header"/>
+    <TextField fx:id="tf_username" promptText="Username" styleClass="text-field"/>
+    <TextField fx:id="tf_email" promptText="Email" styleClass="text-field"/>
+    <PasswordField fx:id="pf_password" promptText="Password" styleClass="text-field"/>
+    <PasswordField fx:id="pf_confirmPassword" promptText="Confirm Password" styleClass="text-field"/>
+    <Label fx:id="lbl_status" styleClass="label"/>
+    <HBox spacing="10" styleClass="hbox">
+        <Button fx:id="btn_register" onAction="#onRegisterButtonClick" text="Registrar" styleClass="button"/>
+        <Button fx:id="btn_cancel" onAction="#onCancelButtonClick" text="Cancelar" styleClass="button"/>
+    </HBox>
+</VBox>
