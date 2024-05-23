@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="480.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.hitojavafxmongo.HelloController" stylesheets="@styles.css">
+<VBox alignment="CENTER" prefHeight="480.0" prefWidth="600.0" spacing="10.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.hitojavafxmongo.HelloController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
   <TableView fx:id="tv_datos" prefHeight="200.0" prefWidth="600.0" styleClass="table-view">
     <columns>
-      <TableColumn fx:id="tc_nombre" text="Nombre" prefWidth="150"/>
-      <TableColumn fx:id="tc_email" text="Email" prefWidth="200"/>
-      <TableColumn fx:id="tc_telefono" text="Teléfono" prefWidth="100"/>
-      <TableColumn fx:id="tc_direccion" text="Dirección" prefWidth="150"/>
+      <TableColumn fx:id="tc_nombre" prefWidth="150" text="Nombre" />
+      <TableColumn fx:id="tc_email" prefWidth="200" text="Email" />
+      <TableColumn fx:id="tc_telefono" prefWidth="100" text="Teléfono" />
+      <TableColumn fx:id="tc_direccion" prefWidth="150" text="Dirección" />
     </columns>
   </TableView>
-  <Label fx:id="welcomeText" text="Bienvenido a Mi aplicacion de JavaFX con MongoDB" styleClass="label" visible="false"/>
+  <Label fx:id="welcomeText" styleClass="label" text="Bienvenido a Mi aplicacion de JavaFX con MongoDB" visible="false" />
 
   <HBox spacing="10" styleClass="hbox">
-    <Label text="Buscar por Nombre:" styleClass="label"/>
-    <TextField fx:id="tf_buscarNombre" promptText="Nombre" styleClass="text-field" onKeyReleased="#leer"/>
+    <Label styleClass="label" text="Buscar por Nombre:" />
+    <TextField fx:id="tf_buscarNombre" onKeyReleased="#leer" promptText="Nombre" styleClass="text-field" />
   </HBox>
 
-  <HBox spacing="10" alignment="CENTER" styleClass="hbox">
-    <Button onAction="#crear" text="Crear" styleClass="button-neon"/>
+  <HBox alignment="CENTER" spacing="10" styleClass="hbox">
+    <Button onAction="#crear" prefHeight="35.0" prefWidth="124.0" styleClass="button-neon" text="Crear" />
   </HBox>
 
-  <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="hbox" prefHeight="50.0">
-    <Button onAction="#cerrarSesion" text="Cerrar Sesión" styleClass="button-red"/>
+  <HBox alignment="CENTER_RIGHT" prefHeight="50.0" spacing="10" styleClass="hbox">
+    <Button onAction="#cerrarSesion" prefHeight="35.0" prefWidth="124.0" styleClass="button-red" text="Cerrar Sesión" />
   </HBox>
 </VBox>

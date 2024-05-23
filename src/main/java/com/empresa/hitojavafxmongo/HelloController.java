@@ -139,6 +139,14 @@ public class HelloController {
 
             MongoCollection<Document> collection = database.getCollection("clientes");
 
+            // Verificar si el cliente ya existe
+            Document existingClient = collection.find(new Document("nombre", tf_nombre.getText())).first();
+            if (existingClient != null) {
+                welcomeText.setText("El cliente ya existe en la base de datos.");
+                stage.close();
+                return;
+            }
+
             Document newClient = new Document("nombre", tf_nombre.getText())
                     .append("email", tf_email.getText())
                     .append("telefono", tf_telefono.getText())
@@ -146,6 +154,13 @@ public class HelloController {
             collection.insertOne(newClient);
             stage.close();
             mostrar();
+
+            // Mostrar ventana emergente de éxito
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Cliente Registrado");
+            alert.setHeaderText(null);
+            alert.setContentText("El cliente ha sido registrado correctamente.");
+            alert.showAndWait();
         });
 
         VBox vbox = new VBox(tf_nombre, tf_email, tf_telefono, tf_direccion, saveButton);

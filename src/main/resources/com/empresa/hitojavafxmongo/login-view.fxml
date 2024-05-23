@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.hitojavafxmongo.LoginController" stylesheets="@styles.css">
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" spacing="10.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.hitojavafxmongo.LoginController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Label text="Iniciar Sesión" styleClass="header"/>
-    <TextField fx:id="tf_username" promptText="Username" styleClass="text-field"/>
-    <PasswordField fx:id="pf_password" promptText="Password" styleClass="text-field"/>
-    <Label fx:id="lbl_status" styleClass="label"/>
+    <Label styleClass="header" text="Iniciar Sesión" />
+    <TextField fx:id="tf_username" promptText="Username" styleClass="text-field" />
+    <PasswordField fx:id="pf_password" promptText="Password" styleClass="text-field" />
+    <Label fx:id="lbl_status" styleClass="label" />
     <HBox spacing="10" styleClass="hbox">
-        <Button fx:id="btn_login" onAction="#onLoginButtonClick" text="Login" styleClass="button"/>
+        <Button fx:id="btn_login" onAction="#onLoginButtonClick" prefHeight="35.0" prefWidth="131.0" styleClass="button" text="Iniciar Sesión" />
     </HBox>
     <HBox spacing="10" styleClass="hbox">
-        <Button fx:id="btn_register" onAction="#onGoToRegisterButtonClick" text="Crear Usuario" styleClass="button"/>
+        <Button fx:id="btn_register" onAction="#onGoToRegisterButtonClick" prefHeight="35.0" prefWidth="131.0" styleClass="button" text="Crear Usuario" />
     </HBox>
 </VBox>

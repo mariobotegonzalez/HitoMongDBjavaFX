@@ -61,6 +61,14 @@ public class RegisterController {
         }
 
         MongoCollection<Document> collection = database.getCollection("users");
+
+        // Verificar si el usuario ya existe
+        Document existingUser = collection.find(new Document("username", tf_username.getText())).first();
+        if (existingUser != null) {
+            lbl_status.setText("El usuario ya existe en la base de datos.");
+            return;
+        }
+
         Document newUser = new Document("username", tf_username.getText())
                 .append("email", tf_email.getText())
                 .append("password", pf_password.getText());
@@ -69,7 +77,7 @@ public class RegisterController {
 
         // Load and show login view
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 300, 200);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 480);
         scene.getStylesheets().add(getClass().getResource("/com/empresa/hitojavafxmongo/styles.css").toExternalForm());
         Stage stage = (Stage) btn_register.getScene().getWindow();
         stage.setScene(scene);
