@@ -3,7 +3,15 @@
     -fx-font-family: 'Arial';
     -fx-padding: 10;
 }
-
+/* Estilo centrado y chulo para el título */
+.titulo {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 5rem;
+    color: #ff6f61;
+    text-shadow: 3px 3px 0 #ffa51d, 6px 6px 0 #ffee58;
+    margin-bottom: 2rem;
+}
 /* Estilo para el TableView */
 .table-view {
     -fx-background-color: #f0f0f0;
@@ -91,3 +99,4 @@
 .button-red:hover {
     -fx-background-color: #cc0000;
 }
+

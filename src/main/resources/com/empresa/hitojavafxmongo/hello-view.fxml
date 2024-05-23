@@ -3,11 +3,15 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" prefHeight="480.0" prefWidth="600.0" spacing="10.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.hitojavafxmongo.HelloController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
+
+  <Text fill="#d72020" styleClass="titulo">Gestión de Clientes</Text>
+
   <TableView fx:id="tv_datos" prefHeight="200.0" prefWidth="600.0" styleClass="table-view">
     <columns>
       <TableColumn fx:id="tc_nombre" prefWidth="150" text="Nombre" />
@@ -16,7 +20,6 @@
       <TableColumn fx:id="tc_direccion" prefWidth="150" text="Dirección" />
     </columns>
   </TableView>
-  <Label fx:id="welcomeText" styleClass="label" text="Bienvenido a Mi aplicacion de JavaFX con MongoDB" visible="false" />
 
   <HBox spacing="10" styleClass="hbox">
     <Label styleClass="label" text="Buscar por Nombre:" />
